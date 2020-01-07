@@ -1,0 +1,11 @@
+C:\Users\martinH\Desktop\PipeServer\bin\Debug\netcoreapp3.1\PipeServer.exe
+C:\Users\martinH\Desktop\PipeServer\bin\Debug\netcoreapp3.1\PipeServer.deps.json
+C:\Users\martinH\Desktop\PipeServer\bin\Debug\netcoreapp3.1\PipeServer.runtimeconfig.json
+C:\Users\martinH\Desktop\PipeServer\bin\Debug\netcoreapp3.1\PipeServer.runtimeconfig.dev.json
+C:\Users\martinH\Desktop\PipeServer\bin\Debug\netcoreapp3.1\PipeServer.dll
+C:\Users\martinH\Desktop\PipeServer\bin\Debug\netcoreapp3.1\PipeServer.pdb
+C:\Users\martinH\Desktop\PipeServer\obj\Debug\netcoreapp3.1\PipeServer.csprojAssemblyReference.cache
+C:\Users\martinH\Desktop\PipeServer\obj\Debug\netcoreapp3.1\PipeServer.AssemblyInfoInputs.cache
+C:\Users\martinH\Desktop\PipeServer\obj\Debug\netcoreapp3.1\PipeServer.AssemblyInfo.cs
+C:\Users\martinH\Desktop\PipeServer\obj\Debug\netcoreapp3.1\PipeServer.dll
+C:\Users\martinH\Desktop\PipeServer\obj\Debug\netcoreapp3.1\PipeServer.pdb

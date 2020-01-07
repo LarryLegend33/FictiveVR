@@ -1,0 +1,11 @@
+C:\Users\martinH\Desktop\pipeclient_test\bin\Debug\netcoreapp3.1\pipeclient_test.exe
+C:\Users\martinH\Desktop\pipeclient_test\bin\Debug\netcoreapp3.1\pipeclient_test.deps.json
+C:\Users\martinH\Desktop\pipeclient_test\bin\Debug\netcoreapp3.1\pipeclient_test.runtimeconfig.json
+C:\Users\martinH\Desktop\pipeclient_test\bin\Debug\netcoreapp3.1\pipeclient_test.runtimeconfig.dev.json
+C:\Users\martinH\Desktop\pipeclient_test\bin\Debug\netcoreapp3.1\pipeclient_test.dll
+C:\Users\martinH\Desktop\pipeclient_test\bin\Debug\netcoreapp3.1\pipeclient_test.pdb
+C:\Users\martinH\Desktop\pipeclient_test\obj\Debug\netcoreapp3.1\pipeclient_test.csprojAssemblyReference.cache
+C:\Users\martinH\Desktop\pipeclient_test\obj\Debug\netcoreapp3.1\pipeclient_test.AssemblyInfoInputs.cache
+C:\Users\martinH\Desktop\pipeclient_test\obj\Debug\netcoreapp3.1\pipeclient_test.AssemblyInfo.cs
+C:\Users\martinH\Desktop\pipeclient_test\obj\Debug\netcoreapp3.1\pipeclient_test.dll
+C:\Users\martinH\Desktop\pipeclient_test\obj\Debug\netcoreapp3.1\pipeclient_test.pdb
