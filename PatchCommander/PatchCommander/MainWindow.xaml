@@ -1,0 +1,13 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PatchCommander"
+        xmlns:Views="clr-namespace:PatchCommander.Views" x:Class="PatchCommander.MainWindow"
+        mc:Ignorable="d"
+        Title="Patch Commander" Height="1122.594" Width="1318.421">
+    <Grid Margin="10,10,2,5.263">
+        <Views:MainView Margin="12.967,3.705,10.953,20.415" d:LayoutOverrides="LeftMargin, RightMargin"/>
+    </Grid>
+</Window>

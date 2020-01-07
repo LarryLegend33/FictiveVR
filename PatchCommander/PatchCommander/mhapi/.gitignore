@@ -1,0 +1,9 @@
+*.sln
+*.csproj
+*.dll
+*.exe
+*.g.cs
+*.g.i.cs
+*.baml
+bin/
+obj/

@@ -1,0 +1,73 @@
+﻿<GUI:WindowAwareView x:Class="PatchCommander.Views.ChannelView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:vm="clr-namespace:PatchCommander.ViewModels"
+             xmlns:local="clr-namespace:PatchCommander.Views"
+             xmlns:GUI="clr-namespace:MHApi.GUI"
+             xmlns:ni="http://schemas.ni.com/controls/2009/xaml/presentation"
+             mc:Ignorable="d" Width="1264" Height="414">
+    <GUI:WindowAwareView.Resources>
+        <vm:ChannelViewModel x:Key="mvmDataSource"/>
+    </GUI:WindowAwareView.Resources>
+    <GUI:WindowAwareView.DataContext>
+        <Binding Source="{StaticResource mvmDataSource}" x:Name="ViewModel" x:FieldModifier="public"/>
+    </GUI:WindowAwareView.DataContext>
+    <Grid>
+        <GroupBox x:Name="groupBox" Header="Channel not assigned" FontWeight="Bold" Margin="10,18,10,2" Grid.RowSpan="2">
+            <Grid Margin="10,0,-2,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="21*"/>
+                    <RowDefinition Height="319*"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="967*"/>
+                        <ColumnDefinition Width="257*"/>
+                    </Grid.ColumnDefinitions>
+                    <ni:Graph x:Name="Ch1Live" Margin="0,0,344.233,-1.06" DataSource="{Binding PlotData_Live}" RenderMode="Hardware">
+                        <ni:Graph.DefaultPlotRenderers>
+                            <ni:LinePlotRenderer Stroke="#FFD28000" StrokeThickness="2"/>
+                        </ni:Graph.DefaultPlotRenderers>
+                        <ni:Graph.Axes>
+                            <ni:AxisDouble x:Name="xScale" Range="0,2000" Orientation="Horizontal" MinorDivisions="{x:Null}" Adjuster="ContinuousChart" InteractionMode="None" Label="Samples"/>
+                            <ni:AxisDouble x:Name="yScale" Range="{Binding UnitRange, Mode=OneWay}" Orientation="Vertical" MinorDivisions="{x:Null}" Adjuster="None" InteractionMode="EditRange" Label="{Binding UnitLabel, Mode=OneWay}">
+                                <ni:AxisDouble.MajorDivisions>
+                                    <ni:RangeLabeledDivisions/>
+                                </ni:AxisDouble.MajorDivisions>
+                                <ni:AxisDouble.MajorGridLines>
+                                    <ni:GridLines/>
+                                </ni:AxisDouble.MajorGridLines>
+                            </ni:AxisDouble>
+                        </ni:Graph.Axes>
+                    </ni:Graph>
+                    <ni:Graph x:Name="Ch1Seal" Margin="0,0,15.733,-1.06" DataSource="{Binding PlotData_Seal}" RenderMode="Hardware" HorizontalAlignment="Right" Width="316.767">
+                        <ni:Graph.DefaultPlotRenderers>
+                            <ni:LinePlotRenderer Stroke="#FF0A8000" StrokeThickness="2"/>
+                        </ni:Graph.DefaultPlotRenderers>
+                        <ni:Graph.Axes>
+                            <ni:AxisDouble x:Name="xScale1" Orientation="Horizontal" MinorDivisions="{x:Null}" Adjuster="None" InteractionMode="EditRange" Label="Time [ms]" Range="{Binding SealXRange}"/>
+                            <ni:AxisDouble x:Name="yScale1" Range="{Binding UnitRange, Mode=OneWay}" Orientation="Vertical" MinorDivisions="{x:Null}" Adjuster="None" InteractionMode="EditRange" Label="{Binding UnitLabel, Mode=OneWay}">
+                                <ni:AxisDouble.MajorDivisions>
+                                    <ni:RangeLabeledDivisions/>
+                                </ni:AxisDouble.MajorDivisions>
+                                <ni:AxisDouble.MajorGridLines>
+                                    <ni:GridLines/>
+                                </ni:AxisDouble.MajorGridLines>
+                            </ni:AxisDouble>
+                        </ni:Graph.Axes>
+                    </ni:Graph>
+                    <Grid Grid.Column="1">
+                        <ni:GaugeDouble Margin="10,4,107,0" Height="140" VerticalAlignment="Top" Value="{Binding RMembrane}" Range="0, 10000, System.Double" PointerBrush="#FF53E0E0" Background="White" InteractionMode="EditRange"/>
+                        <ni:GaugeDouble Margin="10,0,107,5.538" Height="140" VerticalAlignment="Bottom" Value="{Binding RSeal}" Range="0, 300, System.Double" PointerBrush="#FFD23AFF" InteractionMode="EditRange"/>
+                    </Grid>
+                </Grid>
+                <CheckBox x:Name="checkBox" Content="Voltage Clamp                   " HorizontalAlignment="Left" Margin="24.703,1.904,0,3.991" IsChecked="{Binding VC}" d:LayoutOverrides="Height" Width="106.982"/>
+                <ToggleButton x:Name="toggleButton" Content="SealTest" HorizontalAlignment="Left" Margin="151.684,0,0,0" IsChecked="{Binding SealTest}" IsEnabled="{Binding VC}"/>
+                <Label x:Name="label" Content="R Membrane [MO]" HorizontalAlignment="Right" Margin="0,1.04,121.066,-6.053" d:LayoutOverrides="Height"/>
+                <Label x:Name="label_Copy" Content="R Seal [MO]" HorizontalAlignment="Right" Margin="0,173.038,139.066,138.039" Grid.Row="1"/>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</GUI:WindowAwareView>
